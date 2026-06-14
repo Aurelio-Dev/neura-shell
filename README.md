@@ -12,9 +12,18 @@ O projeto simula uma marca fictícia chamada **NEURA//SHELL**, especializada em 
 
 ---
 
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Tecnologias utilizadas
+
+- HTML
+- CSS
+- JavaScript
+- Figma
+
 ## Link do design no Figma
 
-Acesse o design original no Figma:
+O design do projeto foi criado no Figma e serviu como referência visual para o desenvolvimento da landing page.
 
 [NEURA//SHELL — Cyberpunk Landing Page](https://www.figma.com/design/fA329wdSHpmUXvlnsJ3He4/NEURA-SHELL-%E2%80%94-Cyberpunk-Landing-Page?node-id=5-258&t=kmRG06u9O1zv1Kil-1)
 
@@ -102,3 +111,4 @@ neura-shell/
 ├── package-lock.json
 ├── vite.config.js
 └── README.md
+```
