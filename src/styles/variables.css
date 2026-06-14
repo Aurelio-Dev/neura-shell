@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@500;600;700;800&display=swap');
+
+:root {
+  --ns-pink: #ff1b8e;
+  --ns-pink-45: rgba(255, 27, 142, 0.45);
+  --ns-pink-30: rgba(255, 27, 142, 0.3);
+  --ns-pink-10: rgba(255, 27, 142, 0.1);
+  --ns-pink-07: rgba(255, 27, 142, 0.07);
+  --ns-pink-05: rgba(255, 27, 142, 0.05);
+  --ns-red: #cc2222;
+  --ns-cyan: #00d4ff;
+  --ns-green: #7aff7a;
+  --ns-yellow: #ffc940;
+  --ns-black: #0d0d0d;
+  --ns-dark: #0a0a0a;
+  --ns-bg-light: #e8e8e8;
+  --ns-bg-section: #efefef;
+  --ns-white: #ffffff;
+  --ns-grey-900: #222222;
+  --ns-grey-700: #383838;
+  --ns-grey-500: #555555;
+  --ns-grey-400: #666666;
+  --ns-grey-350: #777777;
+  --ns-grey-300: #888888;
+  --ns-grey-200: #aaaaaa;
+  --ns-grey-150: #c0c0c0;
+  --ns-grey-100: #cccccc;
+  --ns-grey-75: #d8d8d8;
+
+  --font-display: 'Orbitron', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --container-max: 1280px;
+  --container-padding: 40px;
+  --section-space: 128px;
+  --card-border: 1px solid rgba(255, 255, 255, 0.72);
+  --dark-border: 1px solid rgba(255, 255, 255, 0.07);
+  --subtle-border: 1px solid rgba(13, 13, 13, 0.09);
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
