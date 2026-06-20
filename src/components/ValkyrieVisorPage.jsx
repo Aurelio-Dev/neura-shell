@@ -299,22 +299,17 @@ function ValkyrieVisorPage() {
           <div className="container prototype-sync__layout">
             <div>
               <SectionHeader
-                number="06"
-                label="Human-Machine Synchronization"
+                number="08"
+                label="Diagnostics"
                 title="Human-Machine Synchronization"
-                description="The visor converts biometric signals, visual stimuli, and environmental data into continuous operational awareness."
+                description="The Valkyrie Visor converts biometric signals, visual stimuli, and environmental data into continuous operational awareness through adaptive neural synchronization."
                 dark
               />
             </div>
             <div className="prototype-sync-panel" aria-label="Human-machine synchronization telemetry">
               <div className="prototype-sync-panel__bar">
-                <span><StatusDot color="green" /> Neural link active</span>
-                <span>VLK-SYNC / 94.8</span>
-              </div>
-              <div className="prototype-sync-panel__wave" aria-hidden="true">
-                <span />
-                <span />
-                <span />
+                <span>Live - Sync Feed</span>
+                <span>VLK-01</span>
               </div>
               <div className="prototype-sync-bars">
                 {syncMetrics.map(([label, pct, tone]) => (
@@ -324,6 +319,9 @@ function ValkyrieVisorPage() {
                   </div>
                 ))}
               </div>
+              <svg className="prototype-sync-panel__wave" viewBox="0 0 368 74" aria-hidden="true">
+                <path d="M0 48 H45 L60 22 L72 72 L88 48 H148 L164 32 L178 70 L194 48 H252 L266 18 L280 74 L296 48 H368" />
+              </svg>
             </div>
           </div>
         </section>
