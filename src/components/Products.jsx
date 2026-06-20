@@ -11,6 +11,7 @@ const products = [
     image: productValkyrie,
     description: 'Full-spectrum neural interface visor with adaptive HUD, biometric tracking and transparent AR overlay. Designed for elite reconnaissance and urban navigation.',
     tags: ['Neural Interface', 'AR Overlay', '240 Hz HUD'],
+    href: '/prototypes/valkyrie-visor',
   },
   {
     model: 'NS-02',
@@ -19,6 +20,7 @@ const products = [
     image: productAegis,
     description: 'Transparent cybernetic respirator with dual-filtration and integrated jaw-mounted sensor array. Fuses seamlessly into NEURA//SHELL helmets.',
     tags: ['99.4% Filtration', '72H Runtime', 'Smart O2 Reg'],
+    href: '#contact',
   },
   {
     model: 'NS-03',
@@ -27,6 +29,7 @@ const products = [
     image: productSamurai,
     description: 'White ceramic composite full-body exo-armor. Modular panels, titanium articulation joints and embedded biosensors inspired by feudal plate design.',
     tags: ['Ceramic Composite', 'Modular Panels', 'Impact Grade 10'],
+    href: '#contact',
   },
 ]
 
@@ -54,7 +57,7 @@ function Products() {
                 <div className="tag-list">
                   {product.tags.map((tag) => <span key={tag}>{tag}</span>)}
                 </div>
-                <a href="#contact" className="card-button">View Details <span>+</span></a>
+                <a href={product.href} className="card-button">View Details <span>+</span></a>
               </div>
             </article>
           ))}
