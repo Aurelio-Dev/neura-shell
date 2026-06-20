@@ -2,7 +2,10 @@ import Header from './Header'
 import Footer from './Footer'
 import { SectionHeader, StatusDot, TechnicalButton } from './UI'
 import valkyrieVisor from '../assets/neura-shell/valkyrie-visor.png'
-import materialTitanium from '../assets/neura-shell/material-titanium.jpg'
+import brushedTitanium from '../assets/neura-shell/Brushed Titanium Plating.png'
+import transparentPolymer from '../assets/neura-shell/Transparent Polymer Tubing.png'
+import adaptiveWhiteCeramic from '../assets/neura-shell/Adaptive White Ceramic.png'
+import microLedSensorMatrix from '../assets/neura-shell/Micro-LED Sensor Matrix.png'
 import productAegis from '../assets/neura-shell/product-aegis.jpg'
 import productSamurai from '../assets/neura-shell/product-samurai.jpg'
 
@@ -84,7 +87,7 @@ const materials = [
     name: 'Brushed Titanium Plating',
     body: 'Aerospace-grade structural shell with anti-glare finish.',
     texture: 'titanium',
-    image: materialTitanium,
+    image: brushedTitanium,
   },
   {
     category: 'Conduit',
@@ -92,6 +95,7 @@ const materials = [
     name: 'Transparent Polymer Tubing',
     body: 'Pressure-stable conduits for airflow, coolant, and signal routing.',
     texture: 'polymer',
+    image: transparentPolymer,
   },
   {
     category: 'Lining',
@@ -99,6 +103,7 @@ const materials = [
     name: 'Adaptive White Ceramic',
     body: 'Thermal-resistant inner lining with neural contact isolation.',
     texture: 'ceramic',
+    image: adaptiveWhiteCeramic,
   },
   {
     category: 'Optics',
@@ -106,6 +111,7 @@ const materials = [
     name: 'Micro-LED Sensor Matrix',
     body: 'Distributed emitter grid powering the optical feed array.',
     texture: 'sensors',
+    image: microLedSensorMatrix,
   },
 ]
 
@@ -135,7 +141,7 @@ const relatedPrototypes = [
     model: 'NS-FRAME',
     name: 'Titanium Exo-Frame',
     category: 'Structure',
-    image: materialTitanium,
+    image: brushedTitanium,
     href: '/#materials',
   },
 ]
@@ -274,14 +280,11 @@ function ValkyrieVisorPage() {
             />
             <div className="prototype-material-grid">
               {materials.map((material) => (
-                <article className="material-card" key={material.code}>
-                  <div
-                    className={`material-card__image material-texture--${material.texture}`}
-                    style={material.image ? { backgroundImage: `url(${material.image})` } : undefined}
-                  >
-                    <span><StatusDot color="silver" /> {material.category}</span>
+                <article className="prototype-material-card" key={material.code}>
+                  <div className={`prototype-material-card__image material-texture--${material.texture}`}>
+                    {material.image && <img src={material.image} alt={material.name} />}
                   </div>
-                  <div className="material-card__body">
+                  <div className="prototype-material-card__body">
                     <span>{material.code}</span>
                     <h3>{material.name}</h3>
                     <p>{material.body}</p>
