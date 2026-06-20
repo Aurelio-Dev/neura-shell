@@ -1,6 +1,6 @@
 export function BrandMark({ dark = false }) {
   return (
-    <a className={`brand-mark ${dark ? 'brand-mark--dark' : ''}`} href="#top" aria-label="NEURA SHELL home">
+    <a className={`brand-mark ${dark ? 'brand-mark--dark' : ''}`} href="/#top" aria-label="NEURA SHELL home">
       <span>NEURA</span><i>//</i><span>SHELL</span>
     </a>
   )
