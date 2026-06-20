@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { BrandMark, TechnicalButton } from './UI'
 
 const navigation = [
-  ['Technology', '#technology'],
-  ['Products', '#products'],
-  ['Interface', '#interface'],
-  ['Materials', '#materials'],
-  ['Contact', '#contact'],
+  ['Technology', '/#technology'],
+  ['Products', '/#products'],
+  ['Interface', '/#interface'],
+  ['Materials', '/#materials'],
+  ['Contact', '/#contact'],
 ]
 
-function Header() {
+function Header({ requestHref = '/#contact' }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const closeMenu = () => setMenuOpen(false)
@@ -35,7 +35,7 @@ function Header() {
             <a key={label} href={href} onClick={closeMenu}>{label}</a>
           ))}
         </nav>
-        <TechnicalButton href="#contact" variant="pink-outline">Request Prototype</TechnicalButton>
+        <TechnicalButton href={requestHref} variant="pink-outline">Request Prototype</TechnicalButton>
       </div>
     </header>
   )
