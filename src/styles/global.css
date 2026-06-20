@@ -1626,7 +1626,7 @@ textarea {
 
 .prototype-sync {
   color: var(--ns-white);
-  background: #08090b;
+  background: #16161A;
   padding-block: 0;
 }
 
@@ -1716,7 +1716,10 @@ textarea {
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
   vector-effect: non-scaling-stroke;
+  animation: prototype-sync-wave 3.2s ease-in-out infinite;
 }
 
 .prototype-sync-bars {
@@ -1753,12 +1756,29 @@ textarea {
   height: 3px;
   display: block;
   background: var(--sync-color);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 .prototype-sync-metric--cyan { --sync-color: var(--ns-cyan); }
 .prototype-sync-metric--green { --sync-color: var(--ns-green); }
 .prototype-sync-metric--yellow { --sync-color: var(--ns-yellow); }
+
+@keyframes prototype-sync-wave {
+  0% {
+    opacity: 0.55;
+    stroke-dashoffset: 520;
+  }
+
+  42%,
+  72% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    opacity: 0.55;
+    stroke-dashoffset: -520;
+  }
+}
 
 .prototype-related-grid {
   display: grid;
@@ -2304,6 +2324,13 @@ textarea {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .prototype-sync-panel__wave path {
+    opacity: 1;
+    stroke-dashoffset: 0;
   }
 }
