@@ -120,3 +120,9 @@ neura-shell/
 ```bash
 git clone https://github.com/Aurelio-Dev/neura-shell.git
 ```
+2. Excutar:
+```bash
+npm install
+npm run dev
+```
+   
